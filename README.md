@@ -34,7 +34,7 @@ spec:
               mountPath: /tmp/watchkiller
 
         - name: cloudsql-proxy
-          image: gcr.io/my-project/sqlproxy:1.11
+          image: gcr.io/my-project/sqlproxy:1.13
           command:
             - "/watchkiller"
             - "/cloud_sql_proxy"
