@@ -1,4 +1,4 @@
-FROM nownabe/watchkiller:1.0 AS watchkiller
+FROM nownabe/watchkiller:1.1 AS watchkiller
 
 FROM gcr.io/cloudsql-docker/gce-proxy:1.13
 
