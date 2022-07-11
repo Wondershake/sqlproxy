@@ -40,6 +40,7 @@ spec:
             - "/cloud_sql_proxy"
             - "-instances=my-project:asia-northeast1:mydb=tcp:3306"
             - "-credential_file=/secrets/cloudsql/credentials.json"
+            - "-log_debug_stdout=true"
           volumeMounts:
             - name: cloudsql-instance-credentials
               mountPath: /secrets/cloudsql
