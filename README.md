@@ -34,12 +34,13 @@ spec:
               mountPath: /tmp/watchkiller
 
         - name: cloudsql-proxy
-          image: gcr.io/my-project/sqlproxy:1.13
+          image: gcr.io/my-project/sqlproxy:1.20.2
           command:
             - "/watchkiller"
             - "/cloud_sql_proxy"
             - "-instances=my-project:asia-northeast1:mydb=tcp:3306"
             - "-credential_file=/secrets/cloudsql/credentials.json"
+            - "-log_debug_stdout=true"
           volumeMounts:
             - name: cloudsql-instance-credentials
               mountPath: /secrets/cloudsql
